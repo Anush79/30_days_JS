@@ -1,70 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
 
-
-:root{
-   --primary:rgb(81, 255, 0);
+:root {
+  --primary: rgb(81, 255, 0);
+}
+::selection {
+  color: var(--primary);
 }
 
-body{
-    
-    background-color: black;
-    background-image: url(bg.jpg);
-    background-size: 100%;
-    color: #a7b9b9;
+body {
+  background-color: black;
+  background-image: url(bg.jpg);
+  background-size: 100%;
+  color: #a7b9b9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: space-between;
+}
+h1 {
+  font-family: "Tilt Prism", cursive;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.key {
+  cursor: pointer;
+  border: 2px solid var(--primary);
+  margin: 5px;
+  padding: 1%;
+  min-width: 6%;
+  font-size: 2rem;
+  transition: all 0.09s;
+}
+kbd {
+  display: block;
+}
+.key span {
+  font-size: small;
+  text-transform: uppercase;
+}
+.playing {
+  box-shadow: 0 0 12px var(--primary);
+  color: var(--primary);
+  text-shadow: 0 0 10px rgb(198, 198, 16);
+  transform: scale(1.1);
+}
+
+#name {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 400px) {
+  .key {
+    min-width: 25%;
+    border-radius: 8px;
+  }
+  .instruction {
+    margin: auto;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: stretch;
-    justify-content: space-between;
-}
-h1{
-    font-family: 'Tilt Prism', cursive;
-    font-size: 2.5rem;
-    color:var(--primary);
-}
-.boxes{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.key{
-    cursor:pointer;
-    border: 2px solid var(--primary);
-    margin: 5px;
-    padding: 1%;
-    min-width:6%;
-    font-size:2rem;
-    transition: all 0.09s;
-}
-kbd{
-    display: block;
-}
-.key span{
-    font-size: small;
-    text-transform: uppercase;
-}
-.playing{
-    box-shadow: 0 0 12px var(--primary);
-    color:var(--primary);
-    text-shadow: 0 0 10px rgb(133, 133, 5);
-   
-    transform:scale(1.1);
-}  
-
-#name{
-    text-decoration: none;
-    color:white;
-}
-@media (max-width:400px){
-    .key{
-        min-width:25%;
-       border-radius:8px;
-    }
-    .instruction{
-        margin: auto;
-        text-align: center;
-        max-width:300px;
-    }
-
+    max-width: 300px;
+  }
 }
