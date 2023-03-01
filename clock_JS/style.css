@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+
+body{
+  background: linear-gradient(#321ddf, #0c161f 70%);
+  min-height:100vh;
+  color:#f7d6aa;
+  font-family: 'Gajraj One', cursive, 'Verdana', Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+h1{
+  text-align: center;
+ letter-spacing:0.9pt;
+ font-size: 2.5rem;
+}
+.clockBody{
+  height: 280px;
+  width: 280px;
+  
+  border-radius: 50%;
+  border: 15px solid rgb(219, 182, 182);
+}
+
