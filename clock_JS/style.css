@@ -1,25 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap");
 
-body{
+:root{
+  --white : #f7d6aa;
+}
+body {
   background: linear-gradient(#321ddf, #0c161f 70%);
-  min-height:100vh;
-  color:#f7d6aa;
-  font-family: 'Gajraj One', cursive, 'Verdana', Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  color: var(--white);
+  font-family: "Gajraj One", cursive, "Verdana", Geneva, Tahoma, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-h1{
+h1 {
   text-align: center;
- letter-spacing:0.9pt;
- font-size: 2.5rem;
+  letter-spacing: 0.9pt;
+  font-size: 2.5rem;
 }
-.clockBody{
+.clockBody {
   height: 280px;
   width: 280px;
-  
   border-radius: 50%;
-  border: 15px solid rgb(219, 182, 182);
+  border: 15px solid var(--white);
+}
+.clockFace {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.join {
+  position: absolute;
+  top: 47%;
+  left: 46%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.hand {
+  width: 40%;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left:10%;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  transition-timing-function: cubic-bezier(0.1, 2.82, 0.165, 1);
+}
+.hour {
+  background: red;
+  width:30%;
+  left:20%;
+}
+
+.minute {
+  background: rgba(255, 255, 0, 0.644);
+  height: 4px;
+
+}
+.second {
+  background: #0cf90cb7;
+  height:3px;
+  width:45%;
+  left:5%
+}
+footer{
+  position:fixed;
+  bottom: 0;
+  color: white;
+  font-size: small;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}  
+.digit{
+  position: relative;
+}
+
+footer a{
+  color:white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
