@@ -4,7 +4,7 @@
   --white : #f7d6aa;
 }
 body {
-  background: linear-gradient(#321ddf, #0c161f 70%);
+  /* background: linear-gradient(#321ddf, #0c161f 70%); */
   min-height: 100vh;
   color: var(--white);
   font-family: "Gajraj One", cursive, "Verdana", Geneva, Tahoma, sans-serif;
@@ -15,7 +15,8 @@ body {
 h1 {
   text-align: center;
   letter-spacing: 0.9pt;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px #000000;
 }
 .clockBody {
   height: 280px;
@@ -64,6 +65,11 @@ h1 {
   width:45%;
   left:5%
 }
+.themeChanger {
+  display: flex;
+  margin: 2rem;  
+  gap:10px
+}
 footer{
   position:fixed;
   bottom: 0;
@@ -71,13 +77,22 @@ footer{
   font-size: small;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }  
-.digit{
-  position: relative;
-}
 
 footer a{
   color:white;
   text-decoration: none;
   cursor: pointer;
 }
-
+button{
+  padding:1em;
+  background-color: #000000;
+  border:2px solid transparent;
+  border-radius: 9px;
+  color: white;
+  font-size: 16px;
+  font-family:  'Gill Sans', 'Gill Sans MT';
+}
+button:active{
+  transform: scale(0.7);
+  transition: all 0.2s;
+}
